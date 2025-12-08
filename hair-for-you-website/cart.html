@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Your Cart — Hair For You Bahamas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><h1>Hair For You Bahamas</h1></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a class="active" href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="box">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+
+    <div id="cart-summary" style="margin-top:20px;">
+      <p>Total: $<span id="cart-total">0</span></p>
+
+      <h3>Choose payment method</h3>
+      <label><input type="radio" name="payment" value="paypal" checked> PayPal (online)</label><br>
+      <label><input type="radio" name="payment" value="cod"> Cash on Delivery (Local)</label>
+
+      <div id="paypal-area" style="margin-top:15px;">
+        <!-- PayPal link will be shown here -->
+        <a id="paypal-checkout" class="btn" href="#">Pay with PayPal</a>
+      </div>
+
+      <div id="cod-area" style="display:none; margin-top:15px;">
+        <form id="codForm" onsubmit="placeCODOrder(); return false;">
+          <label>Full name</label><input required name="name">
+          <label>Phone</label><input required name="phone">
+          <label>Address</label><input required name="address">
+          <button class="btn" type="submit">Place COD Order</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Hair For You Bahamas</p>
+  </footer>
+
+  <script>
+    // payment radio switching
+    document.addEventListener('change', function(e){
+      if(e.target.name === 'payment'){
+        if(e.target.value === 'paypal'){
+          document.getElementById('paypal-area').style.display = '';
+          document.getElementById('cod-area').style.display = 'none';
+        } else {
+          document.getElementById('paypal-area').style.display = 'none';
+          document.getElementById('cod-area').style.display = '';
+        }
+      }
+    });
+
+    // simple PayPal link generator uses a "Buy now" style query (replace email)
+    function placePayPal(total){
+      // IMPORTANT: replace YOUR_PAYPAL_EMAIL with your PayPal email
+      const business = encodeURIComponent('YOUR_PAYPAL_EMAIL');
+      const amount = encodeURIComponent(total.toFixed(2));
+      const item = encodeURIComponent('Hair For You Bahamas Order');
+      // this opens a PayPal checkout page for a single payment
+      return `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${business}&item_name=${item}&amount=${amount}&currency_code=USD`;
+    }
+
+    // expose helper to script.js
+    window.placePayPal = placePayPal;
+  </script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

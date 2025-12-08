@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Contact — Hair For You Bahamas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><h1>Hair For You Bahamas</h1></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="box">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm" onsubmit="alert('Thank you! We will contact you shortly.'); return false;">
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Phone</label>
+      <input type="text" name="phone">
+
+      <label>Message</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+
+    <div style="margin-top:20px;">
+      <p>Email: jasiandra@gmail.com<br>Phone: 242-810-4847</p>
+      <p>Follow: Instagram @hairforyoubahamas</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Hair For You Bahamas</p>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

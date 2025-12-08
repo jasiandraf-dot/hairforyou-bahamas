@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Hair For You Bahamas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <h1>Hair For You Bahamas</h1>
+      <p class="tag">Online Beauty Supply & Services</p>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h2>Welcome to Hair For You Bahamas</h2>
+        <p>Beautiful wigs, hair care and styling services — Pink, Black & Gold boutique style.</p>
+        <a class="btn primary" href="shop.html">Shop Now</a>
+        <a class="btn ghost" href="booking.html">Book Service</a>
+      </div>
+    </section>
+
+    <section class="featured box">
+      <h2>Featured Products</h2>
+      <div class="products">
+        <div class="product-card">
+          <img src="images/image12.png" alt="Wig 1" />
+          <h3>Glam Lace Wig</h3>
+          <p class="price">$85</p>
+          <button class="btn" onclick="addToCart('Glam Lace Wig',85)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/image13.png" alt="Wig 2" />
+          <h3>Curly Bundle</h3>
+          <p class="price">$70</p>
+          <button class="btn" onclick="addToCart('Curly Bundle',70)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/Collection.png" alt="Braiding Hair" />
+          <h3>Braiding Hair</h3>
+          <p class="price">$12</p>
+          <button class="btn" onclick="addToCart('Braiding Hair',12)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Hair For You Bahamas • Email: jasiandra@gmail.com • Phone: 242-810-4847</p>
+    <p class="small">Follow us: Instagram @hairforyoubahamas • Facebook Hair For You Bahamas</p>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

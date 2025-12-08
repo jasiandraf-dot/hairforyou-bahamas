@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Shop — Hair For You Bahamas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand"><h1>Hair For You Bahamas</h1></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="box">
+    <h2>Shop All</h2>
+
+    <div class="products">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="images/image12.png" alt="Glam Lace Wig">
+        <h3>Glam Lace Wig</h3>
+        <p class="price">$85</p>
+        <button class="btn" onclick="addToCart('Glam Lace Wig',85)">Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="images/image13.png" alt="Curly Bundle">
+        <h3>Curly Bundle</h3>
+        <p class="price">$70</p>
+        <button class="btn" onclick="addToCart('Curly Bundle',70)">Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="images/Collection.png" alt="Braiding Hair">

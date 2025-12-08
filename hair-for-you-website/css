@@ -1,0 +1,95 @@
+/* GENERAL STYLE */
+body {
+  background-color: pink;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVIGATION */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  background: white;
+  border-bottom: 2px solid #ddd;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+nav ul li a:hover {
+  color: #ff4fa3;
+  transition: 0.3s;
+}
+
+/* HEADERS */
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* PRODUCT GRID */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* BUTTONS */
+.btn {
+  background: #ff4fa3;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* CONTENT BOX */
+.box {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav ul {
+    justify-content: center;
+  }
+}
+
